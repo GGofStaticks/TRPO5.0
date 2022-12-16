@@ -118,5 +118,32 @@ namespace TRPO5
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string tip = "";
+            int tip1 = 0;
+
+            try
+            {
+                tip = textBox3.Text;
+                tip1 = Convert.ToInt32(textBox4.Text);
+                comboBox1.Items.Add($"Игрушка: {tip} | Количество: {tip1}");
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все поля");
+            }
+        }
     }
 }
